@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Sator Grove</title>
+
+  <!-- Tab icon (auto-swaps via JS on theme change) -->
+  <link id="favicon" rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/sg-light-32.png">
+  <link rel="apple-touch-icon" href="./assets/img/favicon/apple-touch-icon.png">
+  <link rel="stylesheet" href="./assets/css/style.css"/>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div class="brand">
+      <img id="brandLogo" class="brand-logo"
+           src="./assets/img/logo_light.png"
+           data-light="./assets/img/logo_light.png"
+           data-dark="./assets/img/logo_dark.png"
+           alt="Sator Grove"/>
+      <span>Sator Grove</span>
+    </div>
+    <nav class="menu">
+      <a href="#home" data-scroll>HOME</a>
+      <a href="#product" data-scroll>PRODUCT</a>
+      <a href="#solutions" data-scroll>SOLUTIONS</a>
+      <a href="#security" data-scroll>SECURITY</a>
+      <!-- Header CTA uses same style as page-2 CTA -->
+      <a href="#request-demo" class="cta grad-outline" data-scroll>REQUEST DEMO</a>
+
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <!-- sun -->
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+        <!-- moon -->
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="scroller">
+
+  <!-- Home -->
+  <section class="page hero" id="home">
+    <div class="container">
+      <div class="stack">
+        <h1 class="h-title">Sator Grove</h1>
+        <img id="heroLogo" class="hero-logo"
+             src="./assets/img/logo_light.png"
+             data-light="./assets/img/logo_light.png"
+             data-dark="./assets/img/logo_dark.png"
+             alt="Sator Grove Logo"/>
+        <p class="h-sub">The AI Platform for Buy-Side &amp; Sell-Side</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accelerate -->
+  <section class="page" id="accelerate">
+    <div class="container center">
+      <h2 class="section-title accent grad-underline">Accelerate your Deal Book</h2>
+      <p class="lede accent">Time Kills Deals.</p>
+      <p class="lede accent">We save both.</p>
+      <blockquote class="quote">
+        “Time is relative; it’s only worth depends upon what we do as it is passing”
+      </blockquote>
+      <div class="attrib">(Albert Einstein)</div>
+      <div class="cta-wrap">
+        <a class="cta cta-xl grad-outline" href="#request-demo">Request Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product -->
+  <section class="page" id="product">
+    <div class="container center">
+      <h2 class="section-title grad-underline">Product</h2>
+      <div class="product-intro">
+        <p class="pi-hero">
+          Just as Bloomberg digitized financial data in the 1980s,<br/>
+          Sator Grove is now transforming financial workflows.
+        </p>
+        <p class="pi-body">
+          We partner with trusted data providers to bring the highest-quality
+          financial information to our platform. Their expertise, combined with
+          Sator Grove’s technology, provides clarity and confidence.
+        </p>
+        <p class="pi-closing">
+          Powered by a world-class AI architecture that outperforms RAG at every task.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product — Visuals (set 1) -->
+  <section class="page" id="product-visuals">
+    <div class="container">
+      <div class="pv-grid">
+        <figure class="pv-fig">
+          <div class="pv-media">
+            <img src="./assets/img/product/integrations_dark.png" alt="Integrations overview">
+          </div>
+          <figcaption class="pv-cap"><strong>XL Offers a Wealth of Integrations</strong></figcaption>
+        </figure>
+
+        <figure class="pv-fig">
+          <div class="pv-media">
+            <img src="./assets/img/product/integration2_with_dark_logo.png" alt="Multi-Modal answering">
+          </div>
+          <figcaption class="pv-cap"><strong>XL Cycles Between Various Models and Chooses the Best for Any Task</strong></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product — Visuals (set 2) -->
+  <section class="page" id="product-visuals-2">
+    <div class="container">
+      <div class="pv-grid">
+        <figure class="pv-fig">
+          <div class="pv-media">
+            <img src="./assets/img/product/product2_1.png" alt="Continuously improving">
+          </div>
+          <figcaption class="pv-cap">
+            <div class="pv-cap-title">Continuously improving</div>
+            <div class="pv-cap-sub">Edit prompts in seconds — XL learns and adapts to your custom workflow.</div>
+          </figcaption>
+        </figure>
+
+        <figure class="pv-fig">
+          <div class="pv-media">
+            <img src="./assets/img/product/product2_2.png" alt="Trustworthy">
+          </div>
+          <figcaption class="pv-cap">
+            <div class="pv-cap-title">Trustworthy</div>
+            <div class="pv-cap-sub">Citations are available every step of the way. Validate, update and co-work with your agent.</div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product — Partners -->
+  <section class="page" id="product-partners">
+    <div class="container">
+      <h3 class="subsection-title center accent grad-underline" style="margin-bottom:14px;">
+        Our Trusted Data Partners
+      </h3>
+
+      <ul class="partners-grid" aria-label="Trusted data partners">
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/your-firm.png" alt="" onerror="this.style.display='none'">
+            <span class="partner-name">Your Firm’s Data</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/lseg.jpg" alt="LSEG" onerror="this.style.display='none'">
+            <span class="partner-name">LSEG</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/dowjones.png" alt="Dow Jones" onerror="this.style.display='none'">
+            <span class="partner-name">Dow Jones</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/factset.png" alt="FactSet" onerror="this.style.display='none'">
+            <span class="partner-name">FactSet</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/sp-capitaliq.png" alt="Capital IQ" onerror="this.style.display='none'">
+            <span class="partner-name">Capital IQ</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/pitchbook.png" alt="PitchBook" onerror="this.style.display='none'">
+            <span class="partner-name">PitchBook</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/preqin.svg" alt="Preqin" onerror="this.style.display='none'">
+            <span class="partner-name">Preqin</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/web-news.png" alt="" onerror="this.style.display='none'">
+            <span class="partner-name">Real-time Web &amp; News</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/sec.png" alt="SEC Filings" onerror="this.style.display='none'">
+            <span class="partner-name">SEC Filings</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/transcripts.jpg" alt="" onerror="this.style.display='none'">
+            <span class="partner-name">Transcripts</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/investor-presentations.png" alt="" onerror="this.style.display='none'">
+            <span class="partner-name">Investor Presentations</span>
+          </div>
+        </li>
+        <li class="partner">
+          <div class="partner-card">
+            <img class="partner-logo" src="./assets/img/partners/international-filings.png" alt="" onerror="this.style.display='none'">
+            <span class="partner-name">International Filings</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section class="page" id="solutions">
+    <div class="container center">
+      <h2 class="section-title grad-underline">Solutions</h2>
+      <p class="h-sub">Serving Buy-Side and Sell-Side with tailored capabilities.</p>
+      <div class="grid" style="margin-top:22px">
+        <div class="card"><span class="badge">Buy-Side</span><p>AI-powered investment research platform, built to help you discover, research, and monitor new investment ideas with unprecedented depth.</p></div>
+        <div class="card"><span class="badge">Sell-Side</span>
+          <p>Wall Street's playbook works well, but only for mega-deals; it breaks below the middle market.</p>
+          <p>We offer a full-service M&amp;A tech-enabled platform built for the backbone of the nation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security -->
+  <section class="page" id="security">
+    <div class="container center">
+      <h2 class="section-title grad-underline">Security</h2>
+      <p class="h-sub">Built for regulated environments where data control and audit trails are non-negotiable.</p>
+      <p class="h-sub" style="margin-top:10px">We are creating the standard for trustworthy LLMs that provide correct, verifiable answers.</p>
+      <p class="h-sub" style="margin-top:10px">Our proprietary AI architecture is unique. XL does for words what Excel did for numbers.</p>
+    </div>
+  </section>
+
+  <!-- Request Demo -->
+  <section class="page" id="request-demo">
+    <div class="container">
+      <div class="center" style="margin-bottom:18px">
+        <h2 class="section-title grad-underline">Request Demo</h2>
+        <p class="h-sub">Schedule a 30-minute demo with our AI consultants to see how Sator Grove can benefit your firm.</p>
+      </div>
+      <div class="form-card">
+        <form onsubmit="event.preventDefault(); alert('Thanks! We will reach out shortly.');">
+          <div class="form-grid">
+            <label>First Name*<input name="first_name" required></label>
+            <label>Last Name*<input name="last_name" required></label>
+            <label style="grid-column:span 2">Work Email*<input type="email" name="email" required></label>
+            <label style="grid-column:span 2">Company*<input name="company" required></label>
+            <label>Company Type*<select required>
+              <option value="">Select…</option>
+              <option>Asset Management</option><option>Investment Banking</option>
+              <option>Private Equity</option><option>Growth Equity</option>
+              <option>Hedge Fund</option><option>Holding Company</option>
+              <option>Strategic Corporates</option><option>Search Funds</option>
+              <option>Independent Sponsors</option></select></label>
+            <label>Company Size*<select required>
+              <option value="">Select…</option>
+              <option>1–10</option><option>11–50</option><option>51–200</option>
+              <option>201–500</option><option>501–1000</option><option>1000+</option>
+            </select></label>
+            <label style="grid-column:span 2">How did you hear about us?*<select required>
+              <option value="">Select…</option>
+              <option>Referral</option><option>Blog</option><option>Vlog</option>
+              <option>Event</option><option>Social Media Network Platform (SMNP)</option>
+              <option>Google Search</option><option>Other</option></select></label>
+          </div>
+          <div class="center" style="margin-top:20px">
+            <button class="cta alt" type="submit">Book a Demo</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="footer">
+    <div class="container">
+      <div class="footer">© 2025 Sator Grove — The AI Platform for Buy-Side &amp; Sell-Side</div>
+    </div>
+  </section>
+
+</main>
+
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
