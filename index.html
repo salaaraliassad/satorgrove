@@ -150,7 +150,7 @@
   <section class="page" id="product-partners">
     <div class="container">
       <h3 class="subsection-title center accent grad-underline" style="margin-bottom:14px;">
-        Trusted Data
+        Our Trusted Data Partners
       </h3>
 
       <ul class="partners-grid" aria-label="Trusted data partners">
@@ -262,31 +262,44 @@
         <h2 class="section-title grad-underline">Request Demo</h2>
         <p class="h-sub">Schedule a 30-minute demo with our AI consultants to see how Sator Grove can benefit your firm.</p>
       </div>
+
       <div class="form-card">
-        <form onsubmit="event.preventDefault(); alert('Thanks! We will reach out shortly.');">
+        <form id="demoForm">
           <div class="form-grid">
             <label>First Name*<input name="first_name" required></label>
             <label>Last Name*<input name="last_name" required></label>
             <label style="grid-column:span 2">Work Email*<input type="email" name="email" required></label>
             <label style="grid-column:span 2">Company*<input name="company" required></label>
-            <label>Company Type*<select required>
+
+            <label>Company Type*<select name="company_type" required>
               <option value="">Select…</option>
               <option>Asset Management</option><option>Investment Banking</option>
               <option>Private Equity</option><option>Growth Equity</option>
               <option>Hedge Fund</option><option>Holding Company</option>
               <option>Strategic Corporates</option><option>Search Funds</option>
-              <option>Independent Sponsors</option></select></label>
-            <label>Company Size*<select required>
+              <option>Independent Sponsors</option>
+            </select></label>
+
+            <label>Company Size*<select name="company_size" required>
               <option value="">Select…</option>
               <option>1–10</option><option>11–50</option><option>51–200</option>
               <option>201–500</option><option>501–1000</option><option>1000+</option>
             </select></label>
-            <label style="grid-column:span 2">How did you hear about us?*<select required>
+
+            <label style="grid-column:span 2">How did you hear about us?*<select name="source" required>
               <option value="">Select…</option>
               <option>Referral</option><option>Blog</option><option>Vlog</option>
               <option>Event</option><option>Social Media Network Platform (SMNP)</option>
-              <option>Google Search</option><option>Other</option></select></label>
+              <option>Google Search</option><option>Other</option>
+            </select></label>
+
+            <!-- Optional notes -->
+            <label style="grid-column:span 2">Notes <input name="notes" placeholder="Anything else?"></label>
+
+            <!-- Honeypot field (hidden) -->
+            <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px">
           </div>
+
           <div class="center" style="margin-top:20px">
             <button class="cta alt" type="submit">Book a Demo</button>
           </div>
@@ -295,14 +308,52 @@
     </div>
   </section>
 
+
   <section class="page" id="footer">
     <div class="container">
-      <div class="footer">Copyright © 2025 Sator Grove — All Rights Reserved</div>
+      <div class="footer">© 2025 Sator Grove — The AI Platform for Buy-Side &amp; Sell-Side</div>
     </div>
   </section>
 
 </main>
 
 <script src="./assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('demoForm');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    // quick client-side check
+    if (!data.first_name || !data.last_name || !data.email || !data.company) {
+      alert('Please complete all required fields.');
+      return;
+    }
+
+    const btn = form.querySelector('button[type="submit"]');
+    btn?.setAttribute('disabled','disabled');
+
+    try {
+      const r = await fetch('/api/request-demo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (!r.ok) throw new Error(await r.text());
+      alert('Thanks! We’ll reach out shortly.');
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      alert('Sorry—there was an issue sending your request. Please email demo@satorgrove.ai.');
+    } finally {
+      btn?.removeAttribute('disabled');
+    }
+  });
+});
+</script>
+
 </body>
 </html>
